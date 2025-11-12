@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وب مانیا | تیم طراحی و توسعه وب حرفه‌ای</title>
+    
+    <!-- فونت Estedad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="وب مانیا لوگو" class="logo-img">
+                <div class="logo">وب مانیا</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#portfolio">نمونه کارها</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    خلق تجربه‌های <span class="gradient-text">دیجیتالی</span> فراموش‌نشدنی
+                </h1>
+                <p class="hero-description">
+                    تیم وب مانیا با ترکیبی از خلاقیت، تکنولوژی و استراتژی، وب‌سایت‌هایی طراحی می‌کند که تبدیل به ابزار رشد کسب‌وکار شما می‌شوند.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">شروع پروژه</button>
+                    <button class="btn btn-secondary">نمونه کارها</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="simple-showcase">
+                    <div class="showcase-card">
+                        <div class="showcase-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h3>توسعه سریع</h3>
+                            <p>تحویل پروژه در سریع‌ترین زمان ممکن</p>
+                        </div>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3>امنیت بالا</h3>
+                            <p>پیاده‌سازی با آخرین استانداردهای امنیتی</p>
+                        </div>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div>
+                            <h3>پشتیبانی ۲۴/۷</h3>
+                            <p>همیشه در کنار شما هستیم</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-animation">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدمات <span class="gradient-text">حرفه‌ای</span> ما</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>طراحی وب سایت</h3>
+                    <p>طراحی ریسپانسیو و مدرن با آخرین استانداردهای روز دنیا</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>سئو و بهینه‌سازی</h3>
+                    <p>بهبود رتبه گوگل و افزایش ترافیک ارگانیک</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>دیجیتال مارکتینگ</h3>
+                    <p>استراتژی‌های بازاریابی دیجیتال برای رشد کسب‌وکارتان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">نمونه <span class="gradient-text">کارها</span></h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="web">وب سایت</button>
+                <button class="filter-btn" data-filter="app">اپلیکیشن</button>
+                <button class="filter-btn" data-filter="brand">برندینگ</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://picsum.photos/400/300?random=1" alt="پروژه 1">
+                    <div class="portfolio-overlay">
+                        <h3>فروشگاه آنلاین مد</h3>
+                        <p>طراحی و توسعه فروشگاه با ووکامرس</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="https://picsum.photos/400/300?random=2" alt="پروژه 2">
+                    <div class="portfolio-overlay">
+                        <h3>اپلیکیشن مدیریت وظایف</h3>
+                        <p>React Native App</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="https://picsum.photos/400/300?random=3" alt="پروژه 3">
+                    <div class="portfolio-overlay">
+                        <h3>سایت شرکتی بیمه</h3>
+                        <p>طراحی با فریم‌ورک لاراول</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="brand">
+                    <img src="https://picsum.photos/400/300?random=4" alt="پروژه 4">
+                    <div class="portfolio-overlay">
+                        <h3>برندینگ رستوران زنجیره‌ای</h3>
+                        <p>طراحی هویت بصری کامل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">درباره <span class="gradient-text">وب مانیا</span></h2>
+                    <p>ما تیمی از خلاق‌ترین طراحان و توسعه‌دهندگان هستیم که از سال 1398 فعالیت خود را آغاز کرده‌ایم. تاکنون بیش از 200 پروژه موفق را به اتمام رسانده‌ایم و به 150+ کسب‌وکار کمک کرده‌ایم تا در دنیای دیجیتال رشد کنند.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>200+</h3>
+                            <p>پروژه موفق</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>150+</h3>
+                            <p>مشتری راضی</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>سال تجربه</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/500/400?random=5" alt="تیم وب مانیا">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">شروع <span class="gradient-text">همکاری</span></h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="نام و نام خانوادگی" required>
+                    <input type="email" placeholder="ایمیل" required>
+                    <input type="tel" placeholder="شماره تماس">
+                    <select required>
+                        <option value="">نوع پروژه</option>
+                        <option value="web">طراحی وب سایت</option>
+                        <option value="app">طراحی اپلیکیشن</option>
+                        <option value="seo">سئو</option>
+                        <option value="other">سایر</option>
+                    </select>
+                    <textarea rows="5" placeholder="توضیحات پروژه" required></textarea>
+                    <button type="submit" class="btn btn-primary w-100">ارسال درخواست</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>آدرس</h4>
+                            <p>تهران، خیابان ولیعصر، نرسیده به پارک وی</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>تماس</h4>
+                            <p>021-12345678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ایمیل</h4>
+                            <p>info@web-mania.ir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>وب مانیا</h3>
+                    <p>طراحی وب سایت‌هایی که کسب‌وکار شما را متحول می‌کند.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>لینک‌های مفید</h4>
+                    <ul>
+                        <li><a href="#services">خدمات</a></li>
+                        <li><a href="#portfolio">نمونه کارها</a></li>
+                        <li><a href="#about">درباره ما</a></li>
+                        <li><a href="#contact">تماس</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="#">طراحی سایت فروشگاهی</a></li>
+                        <li><a href="#">طراحی سایت شرکتی</a></li>
+                        <li><a href="#">سئو حرفه‌ای</a></li>
+                        <li><a href="#">دیجیتال مارکتینگ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 وب مانیا. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>درخواست شما ارسال شد!</h3>
+            <p>با تشکر! درخواست شما با موفقیت ارسال شد. در اسرع وقت با شما تماس خواهیم گرفت.</p>
+            <button class="btn btn-primary modal-btn" id="modalBtn">بستن</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
