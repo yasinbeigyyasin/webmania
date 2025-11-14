@@ -2,40 +2,50 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>وب مانیا | تیم طراحی و توسعه وب حرفه‌ای</title>
+    <meta name="description" content="تیم وب مانیا - طراحی و توسعه حرفه‌ای وبسایت، سئو و دیجیتال مارکتینگ">
     
     <!-- فونت Estedad -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- OGL Library for WebGL Aurora -->
+    <script src="https://cdn.jsdelivr.net/npm/ogl@1.0.4/dist/ogl.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="logo-container">
-                <img src="logo.jpg" alt="وب مانیا لوگو" class="logo-img">
+                <img src="logo.jpg" alt="وب مانیا لوگو" class="logo-img" loading="lazy">
                 <div class="logo">وب مانیا</div>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">خانه</a></li>
                 <li><a href="#services">خدمات</a></li>
                 <li><a href="#portfolio">نمونه کارها</a></li>
                 <li><a href="#about">درباره ما</a></li>
                 <li><a href="#contact">تماس</a></li>
             </ul>
-            <button class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="منوی موبایل">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Aurora Background -->
+        <div id="aurora-background" class="aurora-bg"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -45,8 +55,8 @@
                     تیم وب مانیا با ترکیبی از خلاقیت، تکنولوژی و استراتژی، وب‌سایت‌هایی طراحی می‌کند که تبدیل به ابزار رشد کسب‌وکار شما می‌شوند.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">شروع پروژه</button>
-                    <button class="btn btn-secondary">نمونه کارها</button>
+                    <button class="btn btn-primary" type="button">شروع پروژه</button>
+                    <button class="btn btn-secondary" type="button">نمونه کارها</button>
                 </div>
             </div>
             <div class="hero-visual">
@@ -80,11 +90,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-bg-animation">
-            <div class="circle c1"></div>
-            <div class="circle c2"></div>
-            <div class="circle c3"></div>
         </div>
     </section>
 
@@ -130,28 +135,28 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="web">
-                    <img src="https://picsum.photos/400/300?random=1" alt="پروژه 1">
+                    <img src="https://picsum.photos/400/300?random=1" alt="پروژه 1" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>فروشگاه آنلاین مد</h3>
                         <p>طراحی و توسعه فروشگاه با ووکامرس</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="app">
-                    <img src="https://picsum.photos/400/300?random=2" alt="پروژه 2">
+                    <img src="https://picsum.photos/400/300?random=2" alt="پروژه 2" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>اپلیکیشن مدیریت وظایف</h3>
                         <p>React Native App</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="web">
-                    <img src="https://picsum.photos/400/300?random=3" alt="پروژه 3">
+                    <img src="https://picsum.photos/400/300?random=3" alt="پروژه 3" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>سایت شرکتی بیمه</h3>
                         <p>طراحی با فریم‌ورک لاراول</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="brand">
-                    <img src="https://picsum.photos/400/300?random=4" alt="پروژه 4">
+                    <img src="https://picsum.photos/400/300?random=4" alt="پروژه 4" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>برندینگ رستوران زنجیره‌ای</h3>
                         <p>طراحی هویت بصری کامل</p>
@@ -168,67 +173,189 @@
                 <div class="about-text">
                     <h2 class="section-title">درباره <span class="gradient-text">وب مانیا</span></h2>
                     <p>ما تیمی از خلاق‌ترین طراحان و توسعه‌دهندگان هستیم که از سال 1398 فعالیت خود را آغاز کرده‌ایم. تاکنون بیش از 200 پروژه موفق را به اتمام رسانده‌ایم و به 150+ کسب‌وکار کمک کرده‌ایم تا در دنیای دیجیتال رشد کنند.</p>
+                    
+                    <!-- NEW STATS WITH ENHANCED STYLE -->
                     <div class="stats">
                         <div class="stat-item">
-                            <h3>200+</h3>
+                            <div class="stat-number" data-target="200">0</div>
                             <p>پروژه موفق</p>
                         </div>
                         <div class="stat-item">
-                            <h3>150+</h3>
+                            <div class="stat-number" data-target="150">0</div>
                             <p>مشتری راضی</p>
                         </div>
                         <div class="stat-item">
-                            <h3>5+</h3>
+                            <div class="stat-number" data-target="5">0</div>
                             <p>سال تجربه</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://picsum.photos/500/400?random=5" alt="تیم وب مانیا">
+                    <img src="https://picsum.photos/500/400?random=5" alt="تیم وب مانیا" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Section - Modern Design -->
+    <section id="contact" class="contact-modern">
         <div class="container">
             <h2 class="section-title">شروع <span class="gradient-text">همکاری</span></h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="نام و نام خانوادگی" required>
-                    <input type="email" placeholder="ایمیل" required>
-                    <input type="tel" placeholder="شماره تماس">
-                    <select required>
-                        <option value="">نوع پروژه</option>
-                        <option value="web">طراحی وب سایت</option>
-                        <option value="app">طراحی اپلیکیشن</option>
-                        <option value="seo">سئو</option>
-                        <option value="other">سایر</option>
-                    </select>
-                    <textarea rows="5" placeholder="توضیحات پروژه" required></textarea>
-                    <button type="submit" class="btn btn-primary w-100">ارسال درخواست</button>
-                </form>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>آدرس</h4>
-                            <p>تهران، خیابان ولیعصر، نرسیده به پارک وی</p>
+            
+            <div class="contact-wrapper">
+                <!-- Form Card -->
+                <div class="contact-form-card">
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3>فرم درخواست پروژه</h3>
+                        <p>لطفاً اطلاعات خود را وارد کنید، در اسرع وقت با شما تماس می‌گیریم</p>
+                    </div>
+                    
+                    <form class="modern-form" id="projectForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" required spellcheck="false" autocomplete="name">
+                            <label for="fullName">نام و نام خانوادگی</label>
+                            <span class="focus-line"></span>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                                <label for="email">ایمیل</label>
+                                <span class="focus-line"></span>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                                <label for="phone">شماره تماس (اختیاری)</label>
+                                <span class="focus-line"></span>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="select-wrapper-modern">
+                                <select id="projectType" name="projectType" required>
+                                    <option value=""></option>
+                                    <option value="web">طراحی وب سایت</option>
+                                    <option value="app">طراحی اپلیکیشن</option>
+                                    <option value="seo">سئو و بهینه‌سازی</option>
+                                    <option value="marketing">دیجیتال مارکتینگ</option>
+                                    <option value="brand">برندینگ</option>
+                                    <option value="other">سایر</option>
+                                </select>
+                                <label for="projectType">نوع پروژه</label>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="projectDetails" name="projectDetails" rows="4" required spellcheck="true"></textarea>
+                            <label for="projectDetails">توضیحات پروژه</label>
+                            <span class="focus-line"></span>
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="budget-slider-container">
+                                <label class="budget-label">بودجه تقریبی: <span id="budgetValue">۵۰ میلیون تومان</span></label>
+                                <input type="range" id="budget" name="budget" min="10" max="500" value="50" step="10">
+                                <div class="budget-range">
+                                    <span>۱۰ میلیون</span>
+                                    <span>۵۰۰+ میلیون</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <label for="newsletter">می‌خواهم اخبار و تخفیف‌ها را دریافت کنم</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">ارسال درخواست</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                            <span class="btn-loading"></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info Card -->
+                <div class="contact-info-card">
+                    <div class="info-header">
+                        <h3>اطلاعات تماس</h3>
+                        <p>راه‌های ارتباطی دیگر با تیم وب مانیا</p>
+                    </div>
+                    
+                    <div class="info-items">
+                        <div class="info-item-modern">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>آدرس دفتر</h4>
+                                <p>تهران، خیابان ولیعصر، نرسیده به پارک وی</p>
+                                <a href="#" class="map-link">مشاهده روی نقشه</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-modern">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>تماس مستقیم</h4>
+                                <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+                                <span class="availability">در ساعات کاری ۹-۱۸</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-modern">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>ایمیل</h4>
+                                <p>info@web-mania.ir</p>
+                                <span class="response-time">پاسخ در کمتر از ۲۴ ساعت</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item-modern">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>پشتیبانی آنلاین</h4>
+                                <p>۲۴/۷ در خدمت شما هستیم</p>
+                                <button class="start-chat-btn" id="startChatBtn">شروع چت</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>تماس</h4>
-                            <p>021-12345678</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>ایمیل</h4>
-                            <p>info@web-mania.ir</p>
+                    
+                    <div class="social-section">
+                        <h4>ما را دنبال کنید</h4>
+                        <div class="social-links-modern">
+                            <a href="#" class="social-link" aria-label="اینستاگرام">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="لینکدین">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="تلگرام">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="گیت‌هاب">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -244,10 +371,10 @@
                     <h3>وب مانیا</h3>
                     <p>طراحی وب سایت‌هایی که کسب‌وکار شما را متحول می‌کند.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="گیت‌هاب"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -276,9 +403,9 @@
     </footer>
 
     <!-- Modal Popup -->
-    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-container">
-            <button class="modal-close" id="modalClose">
+            <button class="modal-close" id="modalClose" aria-label="بستن">
                 <i class="fas fa-times"></i>
             </button>
             <div class="modal-icon">
@@ -287,6 +414,51 @@
             <h3>درخواست شما ارسال شد!</h3>
             <p>با تشکر! درخواست شما با موفقیت ارسال شد. در اسرع وقت با شما تماس خواهیم گرفت.</p>
             <button class="btn btn-primary modal-btn" id="modalBtn">بستن</button>
+        </div>
+    </div>
+
+    <!-- Support Floating Button -->
+    <div class="support-button" id="supportButton" role="button" aria-label="باز کردن پشتیبانی آنلاین">
+        <div class="support-icon">
+            <i class="fas fa-headset"></i>
+        </div>
+        <div class="support-text">پشتیبانی آنلاین</div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+    </div>
+
+    <!-- Support Chat Widget -->
+    <div class="support-widget" id="supportWidget" role="dialog" aria-hidden="true">
+        <div class="widget-header">
+            <div class="widget-header-info">
+                <img src="https://ui-avatars.com/api/?name=Support&background=7c3aed&color=fff&size=40" alt="پشتیبان" class="support-avatar" loading="lazy">
+                <div>
+                    <h4>پشتیبانی وب مانیا</h4>
+                    <span class="status-text">آنلاین - پاسخ سریع</span>
+                </div>
+            </div>
+            <button class="widget-close" id="widgetClose" aria-label="بستن چت">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="widget-body" id="chatMessages" aria-live="polite">
+            <div class="chat-messages">
+                <!-- Initial welcome message -->
+                <div class="message support-msg">
+                    <img src="https://ui-avatars.com/api/?name=Support&background=7c3aed&color=fff&size=24" alt="پشتیبان" class="msg-avatar" loading="lazy">
+                    <div class="msg-content">
+                        <p>سلام! 👋</p>
+                        <p>چطور می‌تونم کمکتون کنم؟</p>
+                        <span class="msg-time">همین الان</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget-footer">
+            <input type="text" placeholder="پیام خود را بنویسید..." class="message-input" id="messageInput" aria-label="پیام چت">
+            <button class="send-btn" id="sendBtn" aria-label="ارسال پیام">
+                <i class="fas fa-paper-plane"></i>
+            </button>
         </div>
     </div>
 
